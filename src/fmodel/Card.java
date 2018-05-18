@@ -7,7 +7,7 @@ public class Card {
 	String name;
 	String set;
 	String number;
-	String imagepath;
+	public String imagepath;
 	int id;
 	
 	public Card(String _name, String _set, String _number, int _id){

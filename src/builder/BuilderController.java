@@ -8,6 +8,8 @@ import javafx.scene.layout.GridPane;
 import javafx.fxml.FXML;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import fmodel.*;
 
 
@@ -16,7 +18,10 @@ public class BuilderController {
 	ArrayList<Card> cardList;
 	
 	@FXML
-	GridPane cardGrid;
+	private GridPane cardGrid;
+	
+	@FXML 
+	private ImageView tabView;
 	
 	@FXML
 	private void test(){
@@ -39,7 +44,7 @@ public class BuilderController {
 			iview.setPreserveRatio(true);
 			
 			FileInputStream input2;
-			input2 = new FileInputStream(cardList.get(0).imagepath);
+			input2 = new FileInputStream(cardList.get(1).imagepath);
 			
 			Image image2 = new Image(input2);
 			ImageView iview2 = new ImageView(image2);
@@ -53,9 +58,12 @@ public class BuilderController {
 
 				@Override
 				public void handle(MouseEvent mouseEvent) {
-					System.out.println("test");
+					for(Category category:cardList.get(0).categories){
+						System.out.println(category);
+					}
+					tabView.setImage(image);
 				}
-				
+			
 			});
 			
 			input.close();
@@ -70,7 +78,34 @@ public class BuilderController {
 	public void initialize(){
 		
 		cardList = new ArrayList<>();
-		cardList.add(new Card("Auron","1", "001", 1));
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		cardList.add(new Card("Auron","1", "001", 1, "Guardian", Type.FORWARD, Rarity.HERO,
+				new ArrayList<Category>(Arrays.asList(new Category[] {Category.X})), Element.FIRE, 6, 001));
+		
+		/*
 		cardList.add(new Card("Auron","1", "002", 2));
 		cardList.add(new Card("Red Mage","1", "003", 3));
 		cardList.add(new Card("Ifrit","1", "004", 4));
@@ -78,7 +113,7 @@ public class BuilderController {
 		cardList.add(new Card("Garland","1", "006", 6));
 		cardList.add(new Card("Gadot","1", "008", 8));
 		cardList.add(new Card("Ranger","1", "008", 8));
-		cardList.add(new Card("Cloud","1", "009", 9));
+		cardList.add(new Card("Cloud","1", "009", 9));*/
 		
 		/*
 		for(Card card:cardList){

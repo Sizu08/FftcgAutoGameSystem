@@ -1,0 +1,5 @@
+package fmodel;
+
+public enum Category {
+	I, II, III, IV, V, Vi, VII ,VIII, IX, X, XI, XII, XIII, XIV, DFF, FFT, FFTA, FFTA2, WOFF, TYPE0, LOV, THEATRHYTHM, FFCC, SPECIAL, MOBIUS, PICTLOGICA
+}

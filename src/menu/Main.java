@@ -22,6 +22,7 @@ public class Main extends Application{
 			Main.mainMenu = root;
 			Scene scene = new Scene(root,1280,720);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("FftcgAutoGameSystem");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

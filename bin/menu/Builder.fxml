@@ -31,7 +31,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="119.0">
                      <children>
-                        <ImageView fitHeight="415.0" fitWidth="286.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="tabView" fitHeight="415.0" fitWidth="286.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
                      </children></AnchorPane>
             </content>
           </Tab>
